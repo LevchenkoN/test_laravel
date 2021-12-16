@@ -9,13 +9,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-
       - name: Setup PHP with composer v2
         uses: shivammathur/setup-php@v2
         with:
           php-version: '8.0'
           tools: composer:v2
-
       - name: Composer Cache
         uses: actions/cache@v1
         with:
@@ -24,13 +22,11 @@ jobs:
           restore-keys: |
             composer-dev-${{ hashFiles('composer.lock') }}
             composer-dev-
-
       - name: Composer Install Dev
         run: |
           composer install
-
       - name: PHP_CodeSniffer Check with Annotations
-        uses: chekalsky/phpcs-action@v1.2.0
+        uses: chekalsky/phpcs-action@v1
 
 
 
