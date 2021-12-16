@@ -29,7 +29,12 @@ jobs:
         run: |
           composer install
 
-      - name: Declare strict types
-        run: |
-          ./vendor/bin/phpinsights --no-interaction --min-quality=80 --min-complexity=90 --min-architecture=75 --min-style=95
+      - name: PHP_CodeSniffer Check with Annotations
+        uses: chekalsky/phpcs-action@v1.2.0
+        with:
+          path: app/Http/Controllers
+
+
+
+
 

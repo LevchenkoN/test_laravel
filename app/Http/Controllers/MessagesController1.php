@@ -45,7 +45,7 @@ class MessagesController1 extends Controller
 
             $message = new Messages();
             $message->body = $request->body;
-            $message->date = Carbon::now();
+            $message->dateTime = Carbon::now();
             $message->email = $request->email;
             $message->save();
         }

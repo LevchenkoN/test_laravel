@@ -28,8 +28,10 @@ class UserController1
     public function post(Request $request){
 
         $email = $request->email;
-
         $password = $request->password;
+        if (empty($email) && empty($password)){
+            return view('components.login');
+        }
         $passwordHashed = hash("sha256", $password);
         $users = User::all();
         foreach ($users as $u) {

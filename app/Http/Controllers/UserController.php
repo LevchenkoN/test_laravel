@@ -38,10 +38,13 @@ class UserController extends Controller
     public function store(Request $request)
     {
         $user = new User();
-
         $user->name = $request->email;
         $user->email = $request->email;
         $password = $request->password;
+
+        if (empty($request->email) && empty($request->password) && empty($request->repeat_password)){
+            return view('components.signup');
+        }
         $passwordHashed = hash("sha256", $password);
         $user->password = $passwordHashed;
         $repeatPassword = $request->repeat_password;

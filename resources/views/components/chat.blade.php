@@ -72,10 +72,10 @@ declare(strict_types=1);
                     else {
                         $list = $('<div style="margin-bottom: 2%; width: 48%; margin-right: 50%; margin-left: 2%"></div>');
                     }
-                    $date = '<span  style="margin-right: 10px; float: right">'+item.date+'</span>';
+                    $dateTime = '<span  style="margin-right: 10px; float: right">'+item.dateTime+'</span>';
                     $body = '<div class="text-left border" style="padding-left: 15px; padding-right: 5px">'+item.body+'</div';
-                    $list.append($email, $date, $body);
-                    console.log(item.date);
+                    $list.append($email, $dateTime, $body);
+                    console.log(item.dateTime);
                     $("#chat_list").append($list);
                 })
             }
