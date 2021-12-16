@@ -31,8 +31,7 @@ jobs:
 
       - name: PHP_CodeSniffer Check with Annotations
         uses: chekalsky/phpcs-action@v1.2.0
-        with:
-          path: app/Http/Controllers
+
 
 
 
