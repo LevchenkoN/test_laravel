@@ -2,7 +2,7 @@ name: Declare strict types check
 on: [push]
 jobs:
   delcare-strict-types:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: ./app/Http/Controllers
@@ -23,7 +23,9 @@ jobs:
             composer-dev-${{ hashFiles('composer.lock') }}
             composer-dev-
       - name: Composer Install Dev
-        run: composer install
+        run: |
+          composer install
+        uses: LevchenkoN/test_laravel@composer.lock
       - name: PHP_CodeSniffer Check with Annotations
         uses: chekalsky/phpcs-action@v1
         with:
