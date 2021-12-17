@@ -25,7 +25,7 @@ jobs:
           composer install
 
       - name: PHP_CodeSniffer
-        run: composer phpunit
+        run: composer phpcs
 
 
 
