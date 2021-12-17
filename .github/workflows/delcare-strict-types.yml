@@ -28,10 +28,7 @@ jobs:
         run: |
           curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
           php phpcs.phar --version
-        uses: ./
-        with:
-          files: "**.php"
-          phpcs_path: php phpcs.phar
+
 
 
 
