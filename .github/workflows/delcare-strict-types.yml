@@ -27,7 +27,7 @@ jobs:
       - name: PHP_CodeSniffer
         run: composer PHP_CodeSniffer
         with:
-          files: "**.php"
+          files: "*.php"
 
 
 
