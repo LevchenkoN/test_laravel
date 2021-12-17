@@ -27,7 +27,7 @@ jobs:
       - name: PHP_CodeSniffer Check with Annotations
         uses: chekalsky/phpcs-action@v1
         with:
-          path: app/
+          path: ./vendor/bin/phpcs --standard=PHPCompatibility --runtime-set testVersion 8 /app/Http/Controllers
 
 
 
