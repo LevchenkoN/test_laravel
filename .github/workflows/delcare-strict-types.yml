@@ -3,9 +3,7 @@ on: [push]
 jobs:
   delcare-strict-types:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./app/Http/Controllers
+
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -25,7 +23,7 @@ jobs:
       - name: Composer Install Dev
         run: |
           composer install
-        uses: LevchenkoN/test_laravel@composer.lock
+
       - name: PHP_CodeSniffer Check with Annotations
         uses: chekalsky/phpcs-action@v1
         with:
