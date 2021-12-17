@@ -24,10 +24,10 @@ jobs:
         run: |
           composer install
 
-      - name: PHP_CodeSniffer Check with Annotations
-        uses: chekalsky/phpcs-action@v1
+      - name: PHP_CodeSniffer
+        run: composer PHP_CodeSniffer
         with:
-          installed_paths: Dealerdirect/phpcodesniffer-composer-installer
+          files: "**.php"
 
 
 
