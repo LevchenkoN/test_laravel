@@ -23,10 +23,9 @@ jobs:
       - name: Composer Install Dev
         run: |
           composer install
-
       - name: OSCAR-phpcs
-       uses: OscarStark/phpcs-ga@3.4.2
-       working-directory: ./app
+        uses: OscarStark/phpcs-ga@3.4.2
+
 
 
 
