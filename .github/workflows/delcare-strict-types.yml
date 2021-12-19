@@ -23,9 +23,10 @@ jobs:
       - name: Composer Install Dev
         run: |
           composer install
-      - name: OSKAR-phpstan
-        uses: OskarStark/phpstan-ga@1.0.1
-
+      - name: PHP Code Style Fixer (php-cs-fixer)
+        uses: StephaneBour/actions-php-cs-fixer@8.0-v3
+        with:
+          dir: './app'
 
 
 
