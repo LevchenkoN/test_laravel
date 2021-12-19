@@ -34,6 +34,7 @@ jobs:
          scan_all: true
          phpcs_path: php phpcs.phar
          standard: 'phpcs.xml'
+         extensions: php
 
 
 
