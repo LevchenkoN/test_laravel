@@ -24,7 +24,7 @@ jobs:
         run: |
           composer install
       - name: PHPCS
-        uses: bshp/actions-phpcs@1
+        uses: bshp/actions-phpcs@0
         with:
           dir: /app/Http/Controllers
 
