@@ -23,9 +23,11 @@ jobs:
       - name: Composer Install Dev
         run: |
           composer install
-      - name: PHP Code Style Fixer (php-cs-fixer)
-        uses: StephaneBour/actions-php-cs-fixer@8.0-v3
-        with:
+      name: Install PHP_CodeSniffer
+      run: |
+          curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
+          php phpcs.phar --version
+      with:
           dir: './app'
 
 
