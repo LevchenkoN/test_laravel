@@ -23,11 +23,11 @@ jobs:
       - name: Composer Install Dev
         run: |
           composer install
-      name: Install PHP_CodeSniffer
-      run: |
+      - name: Install PHP_CodeSniffer
+        run: |
           curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
           php phpcs.phar --version
-      with:
+        with:
           dir: './app'
 
 
