@@ -24,11 +24,9 @@ jobs:
         run: |
           composer install
 
-      - name: Install PHP_CodeSniffer
-        run: |
-          curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
-          php phpcs.phar --version
-        working-directory: ./app
+      - name: OSCAR-phpcs
+       uses: OscarStark/phpcs-ga@3.4.2
+       working-directory: ./app
 
 
 
