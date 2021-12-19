@@ -23,8 +23,8 @@ jobs:
       - name: Composer Install Dev
         run: |
           composer install
-      - name: OSKAR-PHP-CS-Fixer-php8
-        uses: sebkolind/php-cs-fixer-ga@v0.0.3
+      - name: PHPCS
+        uses: bshp/actions-phpcs
         with:
           dir: /app/Http/Controllers
 
