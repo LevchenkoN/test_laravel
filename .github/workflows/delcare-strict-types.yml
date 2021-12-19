@@ -23,7 +23,7 @@ jobs:
       - name: Composer Install Dev
         run: |
           composer install
-      - name: PHP CS (phpcs)
+      - name: PHP_CodeSniffer
         uses: squizlabs/PHP_CodeSniffer
         with:
           dir: './app'
