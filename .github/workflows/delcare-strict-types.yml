@@ -26,7 +26,7 @@ jobs:
       - name: OSKAR-PHP-CS-Fixer-php8
         uses: sebkolind/php-cs-fixer-ga@v0.0.3
         with:
-          dir: './app'
+          dir: /app/Http/Controllers
 
 
 
