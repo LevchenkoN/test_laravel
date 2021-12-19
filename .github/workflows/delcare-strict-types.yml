@@ -23,8 +23,9 @@ jobs:
       - name: Composer Install Dev
         run: |
           composer install
-      - name: OSCAR-phpcs
-        uses: OscarStark/phpcs-ga@3.4.2
+      - name: OSKAR-phpstan
+        uses: OskarStark/phpstan-ga@1.0.1
+
 
 
 
