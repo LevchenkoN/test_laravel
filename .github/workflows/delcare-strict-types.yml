@@ -23,8 +23,8 @@ jobs:
       - name: Composer Install Dev
         run: |
           composer install
-      - name: PHP Code Style (phpcs)
-        uses: chindit/actions-phpcs@1.0.1
+      - name: PHP CS (phpcs)
+        uses: squizlabs/PHP_CodeSniffer
         with:
           dir: './app'
 
