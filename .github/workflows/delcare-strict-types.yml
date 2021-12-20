@@ -33,7 +33,7 @@ jobs:
         with:
          files: "**.php"
          scan_all: true
-         phpcs_path: php phpcs.phar
+
 
 
 
