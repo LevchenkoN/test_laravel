@@ -7,5 +7,5 @@
     <exclude-pattern>*/migrations/*</exclude-pattern>
     <arg value="np"/>
     <rule ref="PSR12"/>
-
+    <rule ref="PHP_CodeSniffer"/>
 </ruleset>
