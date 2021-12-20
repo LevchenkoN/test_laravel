@@ -27,13 +27,14 @@ jobs:
         run: |
           curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
           php phpcs.phar --version
+      - run: composer require --dev opsway/psr12-strict-coding-standard
 
       - uses: Novusvetus/action-php_codesniffer@1.2.0
         with:
          files: "**.php"
          scan_all: true
          phpcs_path: php phpcs.phar
-         standard: "phpcs.xml"
+
 
 
 
